@@ -1,0 +1,602 @@
+<!-- Main HTML Document for Haraiya Secondary School -->
+<!doctype html>
+<html lang="en">
+    <!-- =================== HEAD SECTION =================== -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Haraiya Secondary School</title>
+        <link rel="icon" href="images/logo new.png" type="image/png">
+        <!-- CSS FILES -->   
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">           
+       <link href="css/bootstrap.min.css" rel="stylesheet">  
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+       <link href="css/hss.css" rel="stylesheet">   
+    
+    </head>
+    
+    <body id="HSS"> 
+        <!-- =================== MAIN CONTENT =================== -->
+        <main>
+
+         <!-- =================== NAVBAR =================== -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="hss.html">
+            <img src="images/logo new.png" width="60" height="55" id="navbar-logo">
+            <span>HSS</span>
+        </a>
+
+        <div class="d-lg-none ms-auto me-4" id="mobile-user-icon">
+            <a href="#HSS" class="navbar-icon bi-person smoothscroll" id="mobile-profile-link"></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation" id="navbar-toggler">
+            <span class="navbar-toggler-icon" id="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-5 me-lg-auto" id="navbar-links">
+                <li class="nav-item" id="nav-home-item">
+                    <a class="nav-link click-scroll" href="#section_1" id="nav-home-link">Home</a>
+                </li>
+                <li class="nav-item" id="nav-overview-item">
+                    <a class="nav-link click-scroll" href="#section_2" id="nav-overview-link">Overview</a>
+                </li>
+                <li class="nav-item" id="nav-about-item">
+                    <a class="nav-link click-scroll" href="#section_3" id="nav-about-link">About</a>
+                </li>
+                <li class="nav-item" id="nav-faq-item">
+                    <a class="nav-link click-scroll" href="#section_4" id="nav-faq-link">FAQ</a>
+                </li>
+                <li class="nav-item" id="nav-contact-item">
+                    <a class="nav-link click-scroll" href="#section_5" id="nav-contact-link">Contact</a>
+                </li>
+
+                <li class="nav-item dropdown" id="nav-admissions-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink"
+                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admissions
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink" id="admissions-dropdown">
+                        <li><a class="dropdown-item" href="students.html" id="admission-details-link">Students List</a></li>
+                        <li><a class="dropdown-item" href="admission.html" id="admission-form-link">Admission Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="d-none d-lg-block" id="desktop-user-icon">
+                <a href="login.html" class="navbar-icon bi-person smoothscroll" id="desktop-profile-link"></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- =================== HERO SECTION =================== -->
+<section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+    <div class="container" id="hero-container">
+        <div class="row" id="hero-row">
+
+            <div class="col-lg-8 col-12 mx-auto" id="hero-content">
+                <img src="images/logo new.png" class="img-fluid mb-4" width="150" height="140" alt="Haraiya Secondary School Logo" id="hero-logo">
+
+                <h2 class="haraiya" id="school-name">Haraiya Secondary School</h2>
+
+                <h6 class="haraiya" id="school-location">Kanchan -3, Rupandehi, Nepal</h6>
+<form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search" id="search-form">
+    <div class="input-group input-group-lg" id="search-input-group">
+        <span class="input-group-text bi-search" id="search-icon"></span>
+        <input name="keyword" type="search" class="form-control" id="search-keyword" placeholder="Teachers, Results, Notices, Holidays..." aria-label="Search">
+        <button type="submit" class="form-control" id="search-button">Search</button>
+    </div>
+    <div id="search-results" style="padding-top: 10px; font-size: 1rem;"></div>
+</form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =================== FEATURED SECTION =================== -->
+<section class="featured-section" id="featured-section">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <!-- Teachers and Staffs Card -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                    <a href="teachers.html">
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="mb-2">Teachers and Staffs</h5>
+                            </div>
+                            <span class="badge bg-design rounded-pill ms-auto">42</span>
+                        </div>
+                        <img src="images/teachers and staff.jpg" class="custom-block-image img-fluid" alt="Teachers and Staffs Image">
+                    </a>
+                </div>
+            </div>
+<!-- Notices Card -->
+<div class="col-lg-6 col-12">
+  <div class="custom-block custom-block-overlay">
+    <div class="d-flex flex-column h-100">
+      <img src="images/school.jpg" class="custom-block-image img-fluid" alt="Haraiya Secondary School">
+
+      <div class="custom-block-overlay-text d-flex">
+        <div>
+          <h5 class="timeline-text">Notices</h5>
+          <div id="latest-notice" class="text-white small"></div> <!-- properly closed -->
+          <a href="notices.html" class="learn-more">Learn More</a>
+        </div>
+        <span id="notice-count" class="badge bg-finance rounded-pill ms-auto">0</span>
+      </div>
+
+           <div class="section-overlay"></div>
+    </div>
+  </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- =================== TIMELINE SECTION =================== -->
+<section class="timeline-section section-padding" id="section_2">
+    <div class="section-overlay"></div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <h3 class="timeline-text">Basic Overview</h3>
+            </div>
+
+            <div class="col-lg-10 col-12 mx-auto">
+                <div class="timeline-container">
+                    <ul class="vertical-scrollable-timeline">
+
+                        <div class="list-progress">
+                            <div class="inner"></div>
+                        </div>
+
+                        <!-- Timeline Item 1 -->
+                        <li>
+                            <h4 class="timeline-text">Empowering Education</h4>
+
+                            <p class="timeline-text1">
+                                Our School has been a cornerstone of education in the Kanchan-3, Haraiya community.
+                                We have nurtured generations of learners from Early Childhood Development (ECD) to Grade 12.
+                                Our mission has always been to empower students with knowledge, skills and confidence.
+                            </p>
+
+                            <div class="icon-holder">
+                                <i class="bi-search"></i>
+                            </div>
+                        </li>
+
+                        <!-- Timeline Item 2 -->
+                        <li>
+                            <h4 class="timeline-text">Academic and Holistic Excellence</h4>
+
+                            <p class="timeline-text1">
+                                We offer a dynamic learning environment with specialized streams in Computer engineering, 
+                                Management and Education at the secondary level. Our classrooms are supported by modern tools 
+                                including a library, multimedia resources, and well-equipped science and computer labs.
+                            </p>
+
+                            <div class="icon-holder">
+                                <i class="bi-bookmark"></i>
+                            </div>
+                        </li>
+
+                        <!-- Timeline Item 3 -->
+                        <li>
+                            <h4 class="timeline-text">Our Community and Vision</h4>
+
+                            <p class="timeline-text1">
+                                With 1000+ students, our school is a close-knit community driven by shared dreams.
+                                We are committed to innovation, integrity, and empowering every child to thrive and lead.
+                            </p>
+
+                            <div class="icon-holder">
+                                <i class="bi-book"></i>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+         <!-- =================== EXPLORE SECTION (Tabs) =================== -->
+<section class="explore-section section-padding" id="section_3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="mb-4">About Us</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="our-team-tab" data-bs-toggle="tab" data-bs-target="#our-team-pane" type="button" role="tab" aria-controls="our-team-pane" aria-selected="true">Our Team</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events-pane" type="button" role="tab" aria-controls="events-pane" aria-selected="false">Events</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="vacancies-tab" data-bs-toggle="tab" data-bs-target="#vacancies-pane" type="button" role="tab" aria-controls="vacancies-pane" aria-selected="false">Vacancies</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="holidays-tab" data-bs-toggle="tab" data-bs-target="#holidays-pane" type="button" role="tab" aria-controls="holidays-pane" aria-selected="false">Holidays</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="downloads-tab" data-bs-toggle="tab" data-bs-target="#downloads-pane" type="button" role="tab" aria-controls="downloads-pane" aria-selected="false">Downloads</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="tab-content">
+
+                    <!-- Our Team Tab -->
+                    <div class="tab-pane fade show active" id="our-team-pane" role="tabpanel" aria-labelledby="our-team-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="teachers.html">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Teachers and Staffs</h5></div>
+                                            <span class="badge bg-design rounded-pill ms-auto">42</span>
+                                        </div>
+                                        <img src="images/teachers and staff.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="topics-detail.html">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Management Committee</h5></div>
+                                            <span class="badge bg-design rounded-pill ms-auto"></span>
+                                        </div>
+                                        <img src="images/management.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="students.html">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Students</h5></div>
+                                            <span class="badge bg-design rounded-pill ms-auto">999+</span>
+                                        </div>
+                                        <img src="images/students 2d.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Events Tab -->
+                    <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="admission.html">
+                                        <div class="d-flex">
+                                            <div>
+                                                <h5 class="mb-2">Admission</h5>
+                                                <p class="mb-0">open for Grade XI</p>
+                                            </div>
+                                        </div>
+                                        <img src="images/admission.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div>
+                                                <h5 class="mb-2">Our achievements</h5>
+                                                </div>
+                                            <span class="badge bg-advertising rounded-pill ms-auto">65</span>
+                                        </div>
+                                        <img src="images/achievements.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Education WE Offer</h5></div>
+                                            <span class="badge bg-advertising rounded-pill ms-auto"></span>
+                                        </div>
+                                        <img src="images/education we offer.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vacancies Tab -->
+                    <div class="tab-pane fade" id="vacancies-pane" role="tabpanel" aria-labelledby="vacancies-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div>
+                                                <h5 class="mb-2">Not updated</h5>
+                                                <p class="mb-0">Check-out our facebook page.</p>
+                                            </div>
+                                            <span class="badge bg-finance rounded-pill ms-auto">00</span>
+                                        </div>
+                                        <img src="images/vacancy.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="custom-block custom-block-overlay">
+                                    <div class="d-flex flex-column h-100">
+                                        <img src="images/vacancy1.jpg" class="custom-block-image img-fluid" alt="">
+
+                                        <div class="custom-block-overlay-text d-flex">
+                                            <div>
+                                                <h5 class="text-white mb-2">Nothing to see here.</h5>
+                                                <p class="text-white">Check out our facebook page for more info.</p>
+                                                <a href="#" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
+                                            </div>
+                                            <span class="badge bg-finance rounded-pill ms-auto">00</span>
+                                        </div>
+
+                                        <div class="social-share d-flex">
+                                            <p class="text-white me-4">Share:</p>
+                                            <ul class="social-icon">
+                                                <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+                                                <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+                                                <li><a href="#" class="social-icon-link bi-pinterest"></a></li>
+                                            </ul>
+                                            <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
+                                        </div>
+                                        <div class="section-overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Holidays Tab -->
+                    <div class="tab-pane fade" id="holidays-pane" role="tabpanel" aria-labelledby="holidays-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Not updated.</h5></div>
+                                            <span class="badge bg-music rounded-pill ms-auto">00</span>
+                                        </div>
+                                        <img src="images/holiday1.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Not Updated</h5></div>
+                                            <span class="badge bg-music rounded-pill ms-auto">00</span>
+                                        </div>
+                                        <img src="images/holiday.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Not Updated</h5></div>
+                                            <span class="badge bg-music rounded-pill ms-auto">00</span>
+                                        </div>
+                                        <img src="images/holiday2.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Downloads Tab -->
+                    <div class="tab-pane fade" id="downloads-pane" role="tabpanel" aria-labelledby="downloads-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Nothing to download here.</h5></div>
+                                            <span class="badge bg-education rounded-pill ms-auto">00</span>
+                                        </div>
+                                        <img src="images/DOWNLOADED.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="custom-block bg-white shadow-lg">
+                                    <a href="#">
+                                        <div class="d-flex">
+                                            <div><h5 class="mb-2">Nothing to download here.</h5></div>
+                                            <span class="badge bg-education rounded-pill ms-auto">00</span>
+                                        </div>
+                                        <img src="images/DOWNLOADS.jpg" class="custom-block-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+          <!-- =================== FAQ SECTION =================== -->
+<section class="faq-section section-padding" id="section_4">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12">
+                <h2 class="mb-4">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-lg-5 col-12">
+                <img src="images/think.png" class="img-fluid"  alt="FAQs">
+            </div>
+
+            <div class="col-lg-6 col-12 m-auto">
+                <div class="accordion" id="accordionExample">
+                    
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOneA">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneA" aria-expanded="true" aria-controls="collapseOneA">
+                                How to get admission in Haraiya Secondary School?
+                            </button>
+                        </h2>
+                        <div id="collapseOneA" class="accordion-collapse collapse show" aria-labelledby="headingOneA" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Please visit our <a href="admission.html">Admission</a> page for details on how to apply. You can also contact us via phone or email for any queries.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwoA">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoA" aria-expanded="false" aria-controls="collapseTwoA">
+                                Which courses are available?
+                            </button>
+                        </h2>
+                        <div id="collapseTwoA" class="accordion-collapse collapse" aria-labelledby="headingTwoA" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                We offer a variety of courses from Early Childhood Development (ECD) to Grade 12, including streams in Computer Engineering, Management, and Education. For more details, please refer to our <a href="courses.html">Courses</a> page.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThreeA">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeA" aria-expanded="false" aria-controls="collapseThreeA">
+                                What are the school's hours of operation?
+                            </button>
+                        </h2>
+                        <div id="collapseThreeA" class="accordion-collapse collapse" aria-labelledby="headingThreeA" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Our school operates from 10:00 AM to 4:00 PM, Sunday to Friday. We also have special hours for extracurricular activities and events. For more information, please check our <a href="schedule.html">Schedule</a> page.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFiveA">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveA" aria-expanded="false" aria-controls="collapseFiveA">
+                                Where is the school located and how can I contact the office?
+                            </button>
+                        </h2>
+                        <div id="collapseFiveA" class="accordion-collapse collapse" aria-labelledby="headingFiveA" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Our school is located in Kanchan-3, Rupandehi, Nepal. You can contact us via phone at 9857024716 or email us at <a href="mailto:haraiyasecondary1@gmail.com">haraiyasecondary1@gmail.com</a>. For more details, please visit our <a href="contact.html">Contact Us</a> page.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =================== CONTACT SECTION =================== -->
+<section class="contact-section section-padding section-bg" id="section_5">
+    <div class="container">
+        <div class="row">
+
+            <!-- Google Map -->
+            <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38492.6636381931!2d83.23365279823925!3d27.59741155140679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996f2ca9e15d0cd%3A0xad7656cde60505bc!2sShree%20Haraiya%20Higher%20Secondary%20School!5e0!3m2!1sen!2snp!4v1751796243115!5m2!1sen!2snp" 
+                    width="300" 
+                    height="250" 
+                    style="border:0;" 
+                    allowfullscreen 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
+                <h4 class="mb-3">Contact Us</h4>
+
+                <p>Kanchan -3, Rupandehi, Nepal</p>
+                <hr>
+
+                <p class="d-flex align-items-center mb-1">
+                    <span class="me-2">Phone</span>
+                    <a href="tel:9857024716" class="site-footer-link">9857024716</a>
+                </p>
+
+                <p class="d-flex align-items-center">
+                    <span class="me-2">Email</span>
+                    <a href="mailto:haraiyasecondary1@gmail.com" class="site-footer-link">haraiyasecondary1@gmail.com</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- =================== Footer =================== -->
+ <footer class="site-footer" id="site-footer">
+        &copy; 2024 Haraiya Secondary School. All rights reserved.
+        <p>created by <em><a href="https://www.facebook.com/diamondghimire4">Diamond Ghimire</a></em></p>
+          </footer>
+
+        <!-- =================== JAVASCRIPT FILES =================== -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/search.js"></script>
+        <script src="js/notices.js"></script>
+
+    </body>
+</html>

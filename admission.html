@@ -1,0 +1,373 @@
+<!-- ======================== -->
+<!--  Haraiya Admission Form  -->
+<!-- ======================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Admission Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ========== Styles ========== -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('images/school\ building.jpg') no-repeat center center fixed;
+            opacity: 0.18;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255,255,255,0.95);
+            padding: 35px 40px 30px 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(40,40,100,0.18);
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-40px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 28px;
+            color: #2575fc;
+            letter-spacing: 1px;
+            font-size: 2.1rem;
+            font-weight: 700;
+            animation: popIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.8);}
+            100% { opacity: 1; transform: scale(1);}
+        }
+        .form-group {
+            margin-bottom: 18px;
+            position: relative;
+            animation: fadeIn 0.7s both;
+        }
+        .form-group:nth-child(even) { animation-delay: 0.1s;}
+        .form-group:nth-child(odd) { animation-delay: 0.2s;}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: 0.5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1.5px solid #d1d9e6;
+            border-radius: 6px;
+            background: #f7faff;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 0 2px rgba(37,117,252,0.12);
+            background: #fff;
+        }
+        input[type="file"] {
+            background: #fff;
+            padding: 7px 0;
+            border: none;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+            max-height: 180px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            accent-color: #2575fc;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 18px;
+        }
+        button, .btn {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(37,117,252,0.10);
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            outline: none;
+            letter-spacing: 0.5px;
+        }
+        button:hover, .btn:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 18px rgba(37,117,252,0.18);
+        }
+        .btn-secondary {
+            background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+            color: #333;
+        }
+        .btn-secondary:hover {
+            background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+            color: #222;
+        }
+        .fees {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            animation: fadeIn 0.8s both;
+
+        }
+
+        .fee {
+            display:grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.8);
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: background 0.3s, transform 0.2s;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s;
+            text-align: center;
+        }
+        .fee:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            transform: translateY(-2px);
+        }
+        .fee a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+        .fee a.btn {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .fee a.btn-secondary {
+            background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+            color: #333;
+        }
+        .fee a.btn-secondary:hover {
+            background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+            color: #222;
+        }
+        .fee a:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .fee a.btn:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            transform: translateY(-2px);
+        }
+        .fee a.btn-secondary:hover {
+            background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+            color: #222;
+        }      
+        .fee a img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .fee a small {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+        .fee a.btn, .fee a.btn-secondary {
+            margin-top: 10px;
+        }
+        .fee a.btn:hover, .fee a.btn-secondary:hover {
+            transform: translateY(-2px);
+        }
+        .fee a.btn img, .fee a.btn-secondary img {
+            max-width: 80px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .fee ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .fee li {
+            margin-bottom: 8px;
+        }
+        .fee small {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container { padding: 25px 20px; }
+            h2 { font-size: 1.8rem; }
+            .form-group input, .form-group select, .form-group textarea {
+                font-size: 0.95rem;
+            }
+            button, .btn { font-size: 1rem; padding: 10px 20px; }
+        }
+</style>
+</head>
+<body>
+    <!-- ========== Admission Form Container ========== -->
+    <div class="container">
+        <h2>Student Admission Form</h2>
+        <!-- ========== Admission Form Start ========== -->
+        <form action="#" method="post" autocomplete="on" id="admission-form">
+            <!-- ========== Personal Details Section ========== -->
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">--Select--</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Permanent Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <!-- ========== Parent/Guardian Details Section ========== -->
+            <div class="form-group">
+                <label for="father">Father's Name</label>
+                <input type="text" id="father" name="father" required>
+            </div>
+            <div class="form-group">
+                <label for="mother">Mother's Name</label>
+                <input type="text" id="mother" name="mother" required>
+            </div>
+            <div class="form-group">
+                <label for="guardian">Guardian's Name (if any)</label>
+                <input type="text" id="guardian" name="guardian">
+            </div>
+            <!-- ========== Academic Details Section ========== -->
+            <div class="form-group">
+                <label for="course">Class Applying For</label>
+                <input type="text" id="course" name="course" required>
+            </div>
+            <div class="form-group">
+                <label for="qualification">Previous Class</label>
+                <input type="text" id="qualification" name="qualification" required>
+            </div>
+            <div class="form-group">
+                <label for="marks">Marks/Grade Obtained</label>
+                <input type="text" id="marks" name="marks" required>
+            </div>
+            <!-- ========== Upload Section ========== -->
+            <div class="form-group">
+                <label for="documents">Upload GradeSheet</label>
+                <input type="file" id="documents" name="documents" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                <small>Accepted formats: PDF, JPG, JPEG, PNG</small>
+            </div>
+
+            <div class="form-group">
+                <label for="documents">Upload Birth Certificate</label>
+                <input type="file" id="documents" name="documents" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                <small>Accepted formats: PDF, JPG, JPEG, PNG</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="photo">Upload Passport Size Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+            <!-- ========== Declaration & Payment Section ========== -->
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="declaration" required>
+                    I hereby declare that the information provided is true and correct.
+                </label>
+                <div style="margin-top:18px;">
+                    <div class="fees">
+                        <div class="fee">
+                            <strong>Pay Admission Fee:</strong>
+                            <div class="payment-logos" style="display: flex; justify-content: center; align-items: center; gap: 32px; margin-top: 16px;">
+                                <a href="https://fonepay.com/" target="_blank" title="Pay with Fonepay">
+                                    <img src="images/fonepay.png" alt="Fonepay" style="height:70px; width:auto; display:block;">
+                                </a>
+                                <a href="https://esewa.com.np/" target="_blank" title="Pay with eSewa">
+                                    <img src="images/esewa.png" alt="eSewa" style="height:68px; width:auto; display:block;">
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========== Submit Button Section ========== -->
+            <div style="text-align:center;">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+        <!-- ========== Admission Form End ========== -->
+    </div>
+</body>
+ 
+<script src="js/admission.js"></script>
+</html>
